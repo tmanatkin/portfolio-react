@@ -1,14 +1,7 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 // displayed titles
-const titles = [
-  'Full-Stack Dev',
-  'Problem Solver',
-  'Software Engineer',
-  'BYU Student',
-  'AI Enthusiast',
-  'Coding Wizard',
-];
+const titles = ["Full-Stack Dev", "Problem Solver", "Software Engineer", "BYU Student", "Coding Wizard"];
 
 // seconds per title
 let secondsPerTitle = 3;
@@ -29,7 +22,7 @@ const rotateTitles = () => keyframes`
 
     ${(() => {
       // generated keyframes for each title
-      let keyframesRule = '';
+      let keyframesRule = "";
       for (let i = 1; i < titles.length; i++) {
         keyframesRule += `    
           /* Title */
@@ -51,8 +44,7 @@ const rotateTitles = () => keyframes`
     }`;
 
 const Title = styled.h1`
-  animation: ${rotateTitles} ${titles.length * secondsPerTitle}s ease-in-out
-    infinite;
+  animation: ${rotateTitles} ${titles.length * secondsPerTitle}s ease-in-out infinite;
 `;
 
 const RotatingTitle: React.FC = () => {
